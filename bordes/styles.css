@@ -1,0 +1,166 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #F9F9F9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Encabezado */
+header {
+    background-color: #24831B;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #6DB36C;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #114A1A, #24831B);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #6DB36C;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #4A9E3C;
+}
+
+/* Sección General */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #24831B;
+}
+
+/* Sección de Productos */
+.products {
+    background-color: #F1F1F1;
+}
+
+.products .item {
+    display: inline-block;
+    margin: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+}
+
+.products .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.products img {
+    height: 150px;
+    width: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.products p {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Sobre Nosotros */
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Sección de Contacto */
+.contact p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.contact strong {
+    color: #24831B;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #BABAB8;
+    color: #333;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}

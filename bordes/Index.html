@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBites - Transforma tu rutina</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #24831B;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background-color: #114A1A;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+        }
+        .hero button {
+            background-color: #6DB36C;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .about, .products, .contact {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .products .item {
+            display: inline-block;
+            margin: 10px;
+            background-color: #E6E6E6;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+        .products img {
+            height: 150px;
+        }
+        .products .description {
+            display: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 0.9em;
+        }
+        footer {
+            background-color: #BABAB8;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Botones de navegación
+            document.querySelectorAll("nav ul li a").forEach(link => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const target = document.querySelector(link.getAttribute("href"));
+                    target.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+
+            // Descripciones de productos
+            document.querySelectorAll(".products .item").forEach(item => {
+                item.addEventListener("click", () => {
+                    const description = item.querySelector(".description");
+                    description.style.display = description.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <img src="logo-greenbites.png" alt="Logo GreenBites">
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="hero">
+        <h1>Transforma tu rutina, snack a snack</h1>
+        <p>Descubre snacks saludables que cuidan de ti y del planeta.</p>
+        <button onclick="document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });">Conoce más</button>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="about" id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>En <strong>GreenBites</strong>, nos preocupamos por ofrecer snacks frescos, saludables y amigables con el medio ambiente, ideales para tu rutina diaria.</p>
+    </section>
+
+    <!-- Galería de Productos -->
+    <section class="products" id="products">
+        <h2>Nuestros Snacks</h2>
+        <div class="item">
+            <img src="snack1.jpg" alt="Snack 1">
+            <p>Mix de Frutos Secos</p>
+            <div class="description">Una combinación perfecta de frutos secos para darte energía y salud.</div>
+        </div>
+        <div class="item">
+            <img src="snack2.jpg" alt="Snack 2">
+            <p>Barra de Avena y Miel</p>
+            <div class="description">Barra natural hecha con avena y miel para una merienda deliciosa.</div>
+        </div>
+        <div class="item">
+            <img src="snack3.jpg" alt="Snack 3">
+            <p>Chips de Manzana</p>
+            <div class="description">Crujientes y saludables chips de manzana, sin azúcares añadidos.</div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" id="contact">
+        <h2>Contacto</h2>
+        <p>¡Queremos escucharte! Escríbenos a <strong>info@greenbites.com</strong></p>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 GreenBites - Transforma tu rutina, snack a snack</p>
+    </footer>
+</body>
+</html>
